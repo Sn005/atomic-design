@@ -2,15 +2,17 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text } from '@storybook/addon-knobs'
-// import { action } from '@storybook/addon-actions'
+import { withNotes } from '@storybook/addon-notes'
 import { linkTo } from '@storybook/addon-links'
 
 import AppButton from '../components/AppButton.vue'
 
-storiesOf('atom', module)
+import sampleMd from './sample.md'
+
+storiesOf('Atom/Buttons', module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
-  .add('with some Addons', () => {
+  .add('default', withNotes(sampleMd)(() => {
     const label = text('Label', 'BUTTON')
     return {
       components: { AppButton },
@@ -20,7 +22,7 @@ storiesOf('atom', module)
           >${label}</AppButton>
       `,
       methods: {
-        handleClick: linkTo('SomeComponent')
+        handleClick: linkTo('Atom/ButtonRadius')
       }
     }
-  })
+  }))
