@@ -1,26 +1,28 @@
 // src/stories/index.js
 import { storiesOf } from '@storybook/vue'
 import { withInfo } from 'storybook-addon-vue-info'
-import { withKnobs, text } from '@storybook/addon-knobs'
-// import { withNotes } from '@storybook/addon-notes'
-import { linkTo } from '@storybook/addon-links'
 
-import AppButton from '../components/AppButton.vue'
+import Welcome from './Welcome.vue'
 
-import sampleMd from './sample.md'
+import readme from './README.md'
 
-storiesOf('Atom', module)
+storiesOf('App', module)
   // .addDecorator(VueInfoAddon)
-  .addDecorator(withKnobs)
-  .add('default', withInfo(sampleMd)(() => {
-    const label = text('Label', 'BUTTON')
+  .add('welcome', withInfo(readme)(() => {
     return {
-      components: { AppButton },
+      components: { Welcome },
       template: `
-          <AppButton @click="handleClick">${label}</AppButton>
-      `,
-      methods: {
-        handleClick: linkTo('Atom/ButtonRadius')
-      }
+          <Welcome />>
+      `
     }
   }))
+// storiesOf('App', module)
+//   // .addDecorator(VueInfoAddon)
+//   .add('welcome', withInfo(sampleMd)(() => {
+//     return {
+//       components: { Welcome },
+//       template: `
+//           <Welcome />>
+//       `
+//     }
+//   }))
