@@ -3,11 +3,11 @@ import { storiesOf } from '@storybook/vue'
 import { withKnobs, text } from '@storybook/addon-knobs'
 // import VueInfoAddon from 'storybook-addon-vue-info'
 
-import AppButtonRadius from '../components/AppButtonRadius.vue'
+import AppButtonRadius from '../../components/AppButtonRadius.vue'
 
 storiesOf('Atom', module)
   .addDecorator(withKnobs)
-  .add('warning', () => {
+  .add('test', () => {
     const label = text('Label', 'Warning')
     return {
       components: { AppButtonRadius },

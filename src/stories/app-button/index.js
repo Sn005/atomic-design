@@ -5,14 +5,14 @@ import { withKnobs, text } from '@storybook/addon-knobs'
 // import { withNotes } from '@storybook/addon-notes'
 import { linkTo } from '@storybook/addon-links'
 
-import AppButton from '../components/AppButton.vue'
+import AppButton from '../../components/AppButton.vue'
 
-import sampleMd from './sample.md'
+import readme from './README.md'
 
-storiesOf('Atom', module)
+storiesOf('Atom/Buttons', module)
   // .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
-  .add('default', withInfo(sampleMd)(() => {
+  .add('default', withInfo(readme)(() => {
     const label = text('Label', 'BUTTON')
     return {
       components: { AppButton },
