@@ -5,7 +5,7 @@ import { withKnobs, text } from '@storybook/addon-knobs'
 
 import AppButtonRadius from '../components/AppButtonRadius.vue'
 
-storiesOf('AppButtonRadius', module)
+storiesOf('atom', module)
   .addDecorator(withKnobs)
   .add('warning', () => {
     const label = text('Label', 'Warning')

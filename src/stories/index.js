@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links'
 
 import AppButton from '../components/AppButton.vue'
 
-storiesOf('AppButton', module)
+storiesOf('atom', module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
   .add('with some Addons', () => {
