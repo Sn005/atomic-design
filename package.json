@@ -24,6 +24,7 @@
     "@storybook/addon-centered": "^3.4.5",
     "@storybook/addon-knobs": "^3.4.5",
     "@storybook/addon-links": "^3.4.5",
+    "@storybook/addon-notes": "^3.4.5",
     "@storybook/addon-storysource": "^3.4.5",
     "@storybook/addon-viewport": "^3.4.5",
     "@storybook/vue": "^3.4.5",
