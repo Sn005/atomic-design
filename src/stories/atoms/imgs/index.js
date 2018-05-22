@@ -4,7 +4,7 @@ import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
 import Img from '@components/atoms/Img.vue'
 
-storiesOf(`atoms/imgs`, module)
+storiesOf(`atoms/Imgs`, module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
   .add('default', () => {
