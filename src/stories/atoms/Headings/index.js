@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
 import Heading from '@components/atoms/Heading/Default.vue'
+import HeadingUnderlined from '@components/atoms/Heading/Underlined.vue'
 
 storiesOf(`atoms/Heading`, module)
   .addDecorator(VueInfoAddon)
@@ -35,9 +36,25 @@ storiesOf(`atoms/Heading`, module)
     components: { Heading },
     template: `<Heading :level="6">見出しレベル6</Heading>`
   }))
+  .add('下線付き', () => ({
+    components: { HeadingUnderlined },
+    template: `<HeadingUnderlined>下線付き</HeadingUnderlined>`
+  }))
+  .add('下線付き 見出しレベル1', () => ({
+    components: { HeadingUnderlined },
+    template: `<HeadingUnderlined :level="1">下線付き 見出しレベル1</HeadingUnderlined>`
+  }))
+  .add('下線付き 見出しレベル2', () => ({
+    components: { HeadingUnderlined },
+    template: `<HeadingUnderlined :level="2">下線付き 見出しレベル2</HeadingUnderlined>`
+  }))
+  .add('下線付き 見出しレベル1 見た目2', () => ({
+    components: { HeadingUnderlined },
+    template: `<HeadingUnderlined :level="2" :visualLevel="2">下線付き 見出しレベル1 見た目2</HeadingUnderlined>`
+  }))
   .add('カスタム', () => {
-    const level = number('Label', '1')
-    const visualLevel = number('VisualLevel', '1')
+    const level = number('Level', 1)
+    const visualLevel = number('VisualLevel', 1)
     const txt = text('Txt', 'デフォルトテキストが入ります')
     return {
       components: { Heading },
