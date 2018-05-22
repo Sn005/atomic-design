@@ -1,21 +1,28 @@
 <template lang='pug'>
   img(
-    ...props
+    :src="src"
+    :alt="alt"
+    :width="width"
+    :height="height"
   )
 </template>
 <script>
 export default {
   name: 'Img',
   props: {
-    href: {
+    src: {
+      type: String,
+      required: true
+    },
+    alt: {
       type: String,
       required: true
     },
     width: {
-      type: String
+      type: Number
     },
     height: {
-      type: String
+      type: Number
     }
   }
 }
