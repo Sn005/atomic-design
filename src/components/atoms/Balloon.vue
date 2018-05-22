@@ -1,9 +1,15 @@
 <template lang='pug'>
-  span.balloon 削除する
+  span.balloon {{ label }}
 </template>
 <script>
 export default {
-  name: 'Balloon'
+  name: 'Balloon',
+  props: {
+    label: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
 <style scoped lang='scss'>
