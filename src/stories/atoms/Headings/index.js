@@ -13,27 +13,27 @@ storiesOf(`atoms/Heading`, module)
   }))
   .add('見出しレベル1、見た目2', () => ({
     components: { Heading },
-    template: `<Heading level="1" visualLevel="2">見出しレベル1、見た目2</Heading>`
+    template: `<Heading :level="1" :visualLevel="2">見出しレベル1、見た目2</Heading>`
   }))
   .add('見出しレベル2', () => ({
     components: { Heading },
-    template: `<Heading level="2">見出しレベル2</Heading>`
+    template: `<Heading :level="2">見出しレベル2</Heading>`
   }))
   .add('見出しレベル3', () => ({
     components: { Heading },
-    template: `<Heading level="3">見出しレベル3</Heading>`
+    template: `<Heading :level="3">見出しレベル3</Heading>`
   }))
   .add('見出しレベル4', () => ({
     components: { Heading },
-    template: `<Heading level="4">見出しレベル4</Heading>`
+    template: `<Heading :level="4">見出しレベル4</Heading>`
   }))
   .add('見出しレベル5', () => ({
     components: { Heading },
-    template: `<Heading level="5">見出しレベル5</Heading>`
+    template: `<Heading :level="5">見出しレベル5</Heading>`
   }))
   .add('見出しレベル6', () => ({
     components: { Heading },
-    template: `<Heading level="6">見出しレベル6</Heading>`
+    template: `<Heading :level="6">見出しレベル6</Heading>`
   }))
   .add('カスタム', () => {
     const level = number('Label', '1')
@@ -42,7 +42,7 @@ storiesOf(`atoms/Heading`, module)
     return {
       components: { Heading },
       template: `
-          <Heading level="${level}" visualLevel="${visualLevel}">${txt}</Heading>
+          <Heading :level="${level}" :visualLevel="${visualLevel}">${txt}</Heading>
       `
     }
   })
