@@ -2,7 +2,7 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
-import Heading from '@components/atoms/Heading.vue'
+import Heading from '@components/atoms/Heading/Default.vue'
 
 storiesOf(`atoms/Heading`, module)
   .addDecorator(VueInfoAddon)
