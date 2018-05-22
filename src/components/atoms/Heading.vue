@@ -11,7 +11,7 @@ export default {
   props: {
     level: {
       type: Number,
-      required: true
+      default: 1
     },
     visualLevel: {
       type: Number
