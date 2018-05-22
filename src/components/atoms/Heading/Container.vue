@@ -1,13 +1,5 @@
+<script>
 export default {
-  props: {
-    level: {
-      type: Number,
-      default: 1
-    },
-    visualLevel: {
-      type: Number
-    }
-  },
   computed: {
     formattedLevel () {
       return Math.max(0, Math.min(6, this.level))
@@ -24,3 +16,5 @@ export default {
     }
   }
 }
+
+</script>
