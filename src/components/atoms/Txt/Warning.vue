@@ -1,26 +1,26 @@
 <template lang='pug'>
-  component.h(
+  component.warning(
     :is="tag"
-    :class="style"
+    :class="size"
   )
     slot デフォルトテキストが入ります
 </template>
 <script>
-import Presenter from './Presenter.vue'
 export default {
-  name: 'Heading',
-  mixins: [Presenter],
+  name: 'WarningTxt',
   props: {
-    level: {
-      type: Number,
-      default: 1
+    tag: {
+      type: String,
+      default: 'p'
     },
-    visualLevel: {
-      type: Number
+    size: {
+      type: String,
+      default: 'm'
     }
   }
 }
 </script>
 <style scoped lang='scss'>
 @import "./styles.scss";
+.warning { color: #f0163a; }
 </style>

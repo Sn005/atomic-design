@@ -6,10 +6,10 @@
     slot デフォルトテキストが入ります
 </template>
 <script>
-import Container from './Container.vue'
+import Presenter from './Presenter.vue'
 export default {
   name: 'HeadingUnderlined',
-  mixins: [Container],
+  mixins: [Presenter],
   props: {
     level: {
       type: Number,
