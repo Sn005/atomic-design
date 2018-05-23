@@ -2,16 +2,17 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
-import Icon from '@components/atoms/Icon.vue'
+import Icon from '@components/atoms/Icons/Default.vue'
+import TrashIcon from '@components/atoms/Icons/TrashIcon.vue'
 
 storiesOf(`atoms/Icons`, module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
   .add('ゴミ箱アイコン', () => {
     return {
-      components: { Icon },
+      components: { TrashIcon },
       template: `
-        <icon name="trash-can" />
+        <trash-icon name="trash-can" />
         `
     }
   })
