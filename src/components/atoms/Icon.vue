@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'TrashIcon',
+  name: 'Icon',
   data () {
     return {
       width: 20,
@@ -19,11 +19,15 @@ export default {
     clickable: {
       type: Boolean,
       default: false
+    },
+    name: {
+      type: String,
+      required: true
     }
   },
   computed: {
     iconPath () {
-      return require('./../../../assets/icons/trash-can.svg')
+      return require(`./../../assets/icons/${this.name}.svg`)
     }
   }
 }

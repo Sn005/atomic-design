@@ -1,17 +1,27 @@
 // src/stories/index.js
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
-import { withKnobs } from '@storybook/addon-knobs'
-import TrashIcon from '@components/atoms/Icons/TrashIcon.vue'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import Icon from '@components/atoms/Icon.vue'
 
 storiesOf(`atoms/Icons`, module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
-  .add('デフォルトアイコン一覧', () => {
+  .add('ゴミ箱アイコン', () => {
     return {
-      components: { TrashIcon },
+      components: { Icon },
       template: `
-        <trash-icon />
+        <icon name="trash-can" />
         `
+    }
+  })
+  .add('カスタム', () => {
+    const name = text('アイコン名', 'trash-can')
+    const clickable = boolean('クリッカブル', false)
+    return {
+      components: { Icon },
+      template: `
+          <Icon :clickable="${clickable}" name="${name}" />
+      `
     }
   })
