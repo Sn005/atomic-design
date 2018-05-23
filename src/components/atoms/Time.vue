@@ -16,21 +16,24 @@ export default {
     }
   },
   computed: {
-    displayedTime () {
-      if (!this.isValid(this.time)) return '有効な時間表現ではありません'
-      return this.formatTime(this.time, 'MM月DD日(ddd)HH:mm')
+    unixTime () {
+      return parseInt(this.time, 10)
     },
-    datetime () {
-      if (!this.isValid(this.time)) return '有効な時間表現ではありません'
-      return this.formatTime(this.time)
+    displayedTime () {
+      if (!this.isValid()) return '有効な時間表現ではありません'
+      return this.formatTime('MM月DD日(ddd)HH:mm')
+    },
+    dateTime () {
+      if (!this.isValid()) return '有効な時間表現ではありません'
+      return this.formatTime()
     }
   },
   methods: {
-    isValid (unixtime) {
-      return moment(unixtime, 'x', true).isValid()
+    isValid () {
+      return moment(this.unixTime, 'x', true).isValid()
     },
-    formatTime (time, format = 'YYYY-MM-DDTHH:mm') {
-      return moment(time).format(format)
+    formatTime (format = 'YYYY-MM-DDTHH:mm') {
+      return moment(this.unixTime).format(format)
     }
   }
 }
