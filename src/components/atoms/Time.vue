@@ -13,6 +13,10 @@ export default {
     time: {
       type: Number,
       required: true
+    },
+    format: {
+      type: String,
+      default: 'MM月DD日(ddd)HH:mm'
     }
   },
   computed: {
@@ -21,7 +25,7 @@ export default {
     },
     displayedTime () {
       if (!this.isValid()) return '有効な時間表現ではありません'
-      return this.formatTime('MM月DD日(ddd)HH:mm')
+      return this.formatTime(this.format)
     },
     dateTime () {
       if (!this.isValid()) return '有効な時間表現ではありません'
