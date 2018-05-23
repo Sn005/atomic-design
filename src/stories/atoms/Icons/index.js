@@ -11,7 +11,7 @@ storiesOf(`atoms/Icons`, module)
     return {
       components: { TrashIcon },
       template: `
-      <TrashIcon />
-      `
+        <trash-icon />
+        `
     }
   })
