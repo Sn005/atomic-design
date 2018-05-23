@@ -6,7 +6,7 @@
     slot デフォルトテキストが入ります
 </template>
 <script>
-import Container from './Container.vue'
+import Container from './Presenter.vue'
 export default {
   name: 'Heading',
   mixins: [Container],
