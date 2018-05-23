@@ -1,15 +1,10 @@
 <template lang='pug'>
-  span.balloon {{ label }}
+  span.balloon
+    slot デフォルトテキスト
 </template>
 <script>
 export default {
-  name: 'Balloon',
-  props: {
-    label: {
-      type: String,
-      required: true
-    }
-  }
+  name: 'Balloon'
 }
 </script>
 <style scoped lang='scss'>

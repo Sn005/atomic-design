@@ -12,7 +12,7 @@ storiesOf(`atoms/Balloons`, module)
     return {
       components: { Balloon },
       template: `
-          <Balloon label="${label}"></Balloon>
+          <Balloon>${label}</Balloon>
       `
     }
   })
