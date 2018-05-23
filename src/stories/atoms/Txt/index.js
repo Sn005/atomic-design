@@ -2,9 +2,9 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text, select } from '@storybook/addon-knobs'
-import Txt from '@components/atoms/Txt/Default.vue'
-import InfoTxt from '@components/atoms/Txt/Info.vue'
-import WarningTxt from '@components/atoms/Txt/Warning.vue'
+import Txt from '@/components/atoms/Txt/Default.vue'
+import InfoTxt from '@/components/atoms/Txt/Info.vue'
+import WarningTxt from '@/components/atoms/Txt/Warning.vue'
 // import HeadingUnderlined from '@components/atoms/Heading/Underlined.vue'
 
 storiesOf(`atoms/Txt`, module)

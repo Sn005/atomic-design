@@ -2,7 +2,7 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text } from '@storybook/addon-knobs'
-import Balloon from '@components/atoms/Balloon.vue'
+import Balloon from '@/components/atoms/Balloon.vue'
 
 storiesOf(`atoms/Balloons`, module)
   .addDecorator(VueInfoAddon)

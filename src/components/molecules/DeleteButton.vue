@@ -5,8 +5,8 @@
       balloon 削除する
 </template>
 <script>
-import TrashCanIcon from '@components/atoms/Icons/TrashCanIcon.vue'
-import Balloon from '@components/atoms/Balloon.vue'
+import TrashCanIcon from '@/components/atoms/Icons/TrashCanIcon.vue'
+import Balloon from '@/components/atoms/Balloon.vue'
 export default {
   name: 'DeleteButton',
   components: {TrashCanIcon, Balloon}
