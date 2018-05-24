@@ -1,8 +1,9 @@
 <template lang='pug'>
 section.notification
-  figure.notification__media
+  div.notification__media
     app-img(
       :src="thumbnail"
+      :alt="alt"
       :width="128"
       :height="72"
     )
@@ -11,14 +12,17 @@ section.notification
       :level="3"
       :visualLevel="6"
     ) {{ title }}
-    info-txt.notification__time(size="s")
-      app-time(:time="startAt") ～
+    info.notification__time(size="s")
+      app-time(:time="startAt")
+      | ～
       app-time(
         :time="endAt"
         format="HH:mm"
       )
-    div.notification__del
-      delete-button(@click="onClick")
+    div.notification__del(
+        @click="$emit('delete-action')"
+      )
+      delete-button
 </template>
 <script>
 import AppImg from '@/components/atoms/AppImg.vue'
@@ -48,13 +52,14 @@ export default {
     title () {
       return this.program.title
     },
+    alt () {
+      return this.program.title + 'の画像'
+    },
     startAt () {
       return this.program.startAt
-    }
-  },
-  methods: {
-    onClick () {
-      this.$emit('on-click')
+    },
+    endAt () {
+      return this.program.endAt
     }
   }
 }
