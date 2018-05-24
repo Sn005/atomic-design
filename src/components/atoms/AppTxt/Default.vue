@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: 'Txt',
+  name: 'AppTxt',
   props: {
     tag: {
       type: String,

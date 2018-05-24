@@ -5,7 +5,7 @@
       app-balloon 削除する
 </template>
 <script>
-import AppTrashCanIcon from '@/components/atoms/AppIcon/AppTrashCanIcon.vue'
+import AppTrashCanIcon from '@/components/atoms/AppIcon/TrashCanIcon.vue'
 import AppBalloon from '@/components/atoms/AppBalloon.vue'
 export default {
   name: 'DeleteButton',

@@ -12,7 +12,7 @@ section.notification
       :level="3"
       :visualLevel="6"
     ) {{ title }}
-    info.notification__time(size="s")
+    app-info.notification__time(size="s")
       app-time(:time="startAt")
       | ～
       app-time(
@@ -27,7 +27,7 @@ section.notification
 <script>
 import AppImg from '@/components/atoms/AppImg.vue'
 import AppHeading from '@/components/atoms/AppHeading/Default.vue'
-import Info from '@/components/atoms/Txt/Info.vue'
+import AppInfo from '@/components/atoms/AppTxt/Info.vue'
 import AppTime from '@/components/atoms/AppTime.vue'
 import DeleteButton from '@/components/molecules/DeleteButton.vue'
 export default {
@@ -35,7 +35,7 @@ export default {
   components: {
     AppImg,
     AppHeading,
-    Info,
+    AppInfo,
     AppTime,
     DeleteButton
   },
