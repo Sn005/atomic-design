@@ -1,10 +1,11 @@
 <template lang='pug'>
-  notification.item(
-    v-for(program in programs)
-    :key="program.id"
-    :program="program"
-    @delete-action="action"
-  )
+  div
+    notification.item(
+      v-for="program in programs"
+      :key="program.id"
+      :program="program"
+      @delete-action="$emit('delete-action')"
+    )
 </template>
 <script>
 import Notification from '@/components/organisms/Notification.vue'
