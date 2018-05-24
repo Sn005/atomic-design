@@ -8,7 +8,7 @@ section.notification
       :height="72"
     )
   div.notification__body
-    heading(
+    app-heading(
       :level="3"
       :visualLevel="6"
     ) {{ title }}
@@ -26,7 +26,7 @@ section.notification
 </template>
 <script>
 import AppImg from '@/components/atoms/AppImg.vue'
-import Heading from '@/components/atoms/Heading/Default.vue'
+import AppHeading from '@/components/atoms/AppHeading/Default.vue'
 import Info from '@/components/atoms/Txt/Info.vue'
 import AppTime from '@/components/atoms/AppTime.vue'
 import DeleteButton from '@/components/molecules/DeleteButton.vue'
@@ -34,7 +34,7 @@ export default {
   name: 'Notification',
   components: {
     AppImg,
-    Heading,
+    AppHeading,
     Info,
     AppTime,
     DeleteButton
