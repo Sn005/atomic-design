@@ -2,9 +2,9 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
-import Img from '@/components/atoms/Img.vue'
+import AppImg from '@/components/atoms/AppImg.vue'
 
-storiesOf(`atoms/Imgs`, module)
+storiesOf(`atoms/AppImg`, module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
   .add('default', () => {
@@ -13,9 +13,9 @@ storiesOf(`atoms/Imgs`, module)
     const width = number('Width', '150')
     const height = number('Height', '150')
     return {
-      components: { Img },
+      components: { AppImg },
       template: `
-          <Img src="${src}" alt="${alt}" width="${width}" height="${height}" />
+          <app-img src="${src}" alt="${alt}" width="${width}" height="${height}" />
       `
     }
   })

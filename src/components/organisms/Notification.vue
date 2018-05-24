@@ -1,7 +1,7 @@
 <template lang='pug'>
 section.notification
   figure.notification__media
-    img(
+    app-img(
       :src="thumbnail"
       :width="128"
       :height="72"
@@ -21,7 +21,7 @@ section.notification
       delete-button(@click="onClick")
 </template>
 <script>
-import Img from '@/components/atoms/Img.vue'
+import AppImg from '@/components/atoms/AppImg.vue'
 import Heading from '@/components/atoms/Heading/Default.vue'
 import Info from '@/components/atoms/Txt/Info.vue'
 import AppTime from '@/components/atoms/AppTime.vue'
@@ -29,7 +29,7 @@ import DeleteButton from '@/components/molecules/DeleteButton.vue'
 export default {
   name: 'Notification',
   components: {
-    Img,
+    AppImg,
     Heading,
     Info,
     AppTime,

@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'Img',
+  name: 'AppImg',
   props: {
     src: {
       type: String,
