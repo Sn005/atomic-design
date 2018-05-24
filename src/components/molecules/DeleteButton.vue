@@ -1,15 +1,15 @@
 <template lang='pug'>
   div.delete-button
-    trash-can-icon.delete-button__icon(clickable)
+    app-trash-can-icon.delete-button__icon(clickable)
     div.delete-button__balloon
       app-balloon 削除する
 </template>
 <script>
-import TrashCanIcon from '@/components/atoms/Icons/TrashCanIcon.vue'
+import AppTrashCanIcon from '@/components/atoms/AppIcon/AppTrashCanIcon.vue'
 import AppBalloon from '@/components/atoms/AppBalloon.vue'
 export default {
   name: 'DeleteButton',
-  components: {TrashCanIcon, AppBalloon}
+  components: {AppTrashCanIcon, AppBalloon}
 }
 </script>
 <style scoped lang='scss'>
