@@ -1,7 +1,7 @@
 <script>
 import Presenter from './Presenter.vue'
 export default {
-  name: 'AppTrashCanIcon',
+  name: 'TrashCanIcon',
   mixins: [Presenter],
   data () {
     return {
