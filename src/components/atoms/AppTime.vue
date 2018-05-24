@@ -8,7 +8,7 @@ import moment from 'moment'
 import 'moment/locale/ja'
 moment.locale()
 export default {
-  name: 'Time',
+  name: 'AppTime',
   props: {
     time: {
       type: Number,
