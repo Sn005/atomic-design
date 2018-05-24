@@ -2,7 +2,7 @@
 import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs, text } from '@storybook/addon-knobs'
-import Balloon from '@/components/atoms/Balloon.vue'
+import AppBalloon from '@/components/atoms/AppBalloon.vue'
 
 storiesOf(`atoms/Balloons`, module)
   .addDecorator(VueInfoAddon)
@@ -10,9 +10,9 @@ storiesOf(`atoms/Balloons`, module)
   .add('delete', () => {
     const label = text('Label', '削除しました')
     return {
-      components: { Balloon },
+      components: { AppBalloon },
       template: `
-          <Balloon>${label}</Balloon>
+          <app-balloon>${label}</app-balloon>
       `
     }
   })

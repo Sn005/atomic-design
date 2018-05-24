@@ -2,14 +2,14 @@
   div.delete-button
     trash-can-icon.delete-button__icon(clickable)
     div.delete-button__balloon
-      balloon 削除する
+      app-balloon 削除する
 </template>
 <script>
 import TrashCanIcon from '@/components/atoms/Icons/TrashCanIcon.vue'
-import Balloon from '@/components/atoms/Balloon.vue'
+import AppBalloon from '@/components/atoms/AppBalloon.vue'
 export default {
   name: 'DeleteButton',
-  components: {TrashCanIcon, Balloon}
+  components: {TrashCanIcon, AppBalloon}
 }
 </script>
 <style scoped lang='scss'>

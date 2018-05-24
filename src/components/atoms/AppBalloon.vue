@@ -4,7 +4,7 @@
 </template>
 <script>
 export default {
-  name: 'Balloon'
+  name: 'AppBalloon'
 }
 </script>
 <style scoped lang='scss'>
