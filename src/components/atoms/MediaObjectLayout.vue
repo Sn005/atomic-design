@@ -2,10 +2,10 @@
   component.container(
     :is="tag"
   )
-  div
-    slot(name="media")
-  div.body
-    slot(name="body")
+    div
+      slot(name="media")
+    div.body
+      slot(name="body")
 </template>
 <script>
 export default {
@@ -13,7 +13,10 @@ export default {
   props: {
     tag: {
       type: String,
-      default: 'div'
+      default: 'div',
+      validator (val) {
+        return ['div', 'section'].includes(val)
+      }
     }
   }
 }
