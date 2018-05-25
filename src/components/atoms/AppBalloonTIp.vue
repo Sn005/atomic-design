@@ -5,7 +5,7 @@
     )
     app-balloon(
       slot="tip"
-    ) slot(name="balloon")
+    ) {{ label }}
 </template>
 <script>
 import AppBalloon from '@/components/atoms/AppBalloon.vue'
@@ -15,6 +15,12 @@ export default {
   components: {
     AppBalloon,
     HoverTipInteraction
+  },
+  props: {
+    label: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

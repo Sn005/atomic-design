@@ -1,10 +1,12 @@
 <template lang='pug'>
-div.root
-  div(v-if="hasRoot")
-    slot(name="root")
-  div.marker(v-if="hasMarker")
+span.root
+  slot(
+    v-if="hasRoot"
+    name="root"
+  )
+  span.marker(v-if="hasMarker")
     slot(name="marker")
-  div.tip(v-if="hasTip")
+  span.tip(v-if="hasTip")
     slot(name="tip") デフォルト文章が入ります
 </template>
 <script>
