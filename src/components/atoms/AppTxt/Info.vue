@@ -1,29 +1,13 @@
-<template lang='pug'>
-  component.info(
-    :is="tag"
-    :class="size"
-  )
-    slot デフォルトテキストが入ります
-</template>
 <script>
+import Presenter from './Presenter.vue'
 export default {
   name: 'InfoTxt',
+  extends: Presenter,
   props: {
-    tag: {
-      type: String,
-      default: 'p',
-      validator (val) {
-        return ['div', 'p', 'span'].includes(val)
-      }
-    },
-    size: {
-      type: String,
-      default: 'm'
-    }
+    ...Presenter.props
   }
 }
 </script>
 <style scoped lang='scss'>
-@import "./styles.scss";
-.info { color: #8C8C8C; }
+.state { color: #8C8C8C; }
 </style>

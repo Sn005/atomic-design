@@ -1,29 +1,13 @@
-<template lang='pug'>
-  component.warning(
-    :is="tag"
-    :class="size"
-  )
-    slot デフォルトテキストが入ります
-</template>
 <script>
+import Presenter from './Presenter.vue'
 export default {
   name: 'WarningTxt',
+  extends: Presenter,
   props: {
-    tag: {
-      type: String,
-      default: 'p',
-      validator (val) {
-        return ['div', 'p', 'span'].includes(val)
-      }
-    },
-    size: {
-      type: String,
-      default: 'm'
-    }
+    ...Presenter.props
   }
 }
 </script>
 <style scoped lang='scss'>
-@import "./styles.scss";
-.warning { color: #f0163a; }
+.state { color: #f0163a; }
 </style>

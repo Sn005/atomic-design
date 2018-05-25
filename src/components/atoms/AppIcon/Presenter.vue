@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'Icon',
+  name: 'IconPresenter',
   props: {
     clickable: {
       type: Boolean,

@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'HeadingPresenter',
   props: {
     level: {
       type: Number,
