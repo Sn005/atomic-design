@@ -28,3 +28,8 @@ export default {
   }
 }
 </script>
+<style scoped lang='scss'>
+.clickable{
+  cursor: pointer;
+}
+</style>
