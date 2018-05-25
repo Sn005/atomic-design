@@ -12,7 +12,7 @@ storiesOf(`atoms/Txt`, module)
   .addDecorator(withKnobs)
   .add('テキスト -S', () => ({
     components: { AppTxt },
-    template: `<app-txt tag="div" size="s">テキストを表示</txt>`
+    template: `<app-txt tag="div" size="s">テキストを表示</app-txt>`
   }))
   .add('テキスト -M', () => ({
     components: { AppTxt },

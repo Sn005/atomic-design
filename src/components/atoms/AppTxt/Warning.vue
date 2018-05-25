@@ -11,7 +11,10 @@ export default {
   props: {
     tag: {
       type: String,
-      default: 'p'
+      default: 'p',
+      validator (val) {
+        return ['div', 'p', 'span'].includes(val)
+      }
     },
     size: {
       type: String,
