@@ -9,20 +9,13 @@
 import Presenter from './Presenter.vue'
 export default {
   name: 'HeadingUnderlined',
-  mixins: [Presenter],
+  extends: Presenter,
   props: {
-    level: {
-      type: Number,
-      default: 1
-    },
-    visualLevel: {
-      type: Number
-    }
+    ...Presenter.props
   }
 }
 </script>
 <style scoped lang='scss'>
-@import "./styles.scss";
 .underlined{
   padding-bottom: 8px;
   border-bottom: 2px solid #ccc;

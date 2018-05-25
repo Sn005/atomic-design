@@ -9,18 +9,9 @@
 import Presenter from './Presenter.vue'
 export default {
   name: 'Heading',
-  mixins: [Presenter],
+  extends: Presenter,
   props: {
-    level: {
-      type: Number,
-      default: 1
-    },
-    visualLevel: {
-      type: Number
-    }
+    ...Presenter.props
   }
 }
 </script>
-<style scoped lang='scss'>
-@import "./styles.scss";
-</style>
