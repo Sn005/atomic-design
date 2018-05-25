@@ -2,12 +2,9 @@
 import Presenter from './Presenter.vue'
 export default {
   name: 'AppIcon',
-  mixins: [Presenter],
+  extends: Presenter,
   props: {
-    clickable: {
-      type: Boolean,
-      default: false
-    },
+    ...Presenter.props,
     name: {
       type: String,
       required: true

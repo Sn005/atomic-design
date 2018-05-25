@@ -4,16 +4,18 @@
     <br>
     {{size}}
     <br>
-    <notification :program="program" @delete-action="sample" />
+    <app-icon name="trash-can"></app-icon>
+    <br>
     <router-view/>
   </div>
 </template>
 
 <script>
 import Notification from '@/components/organisms/Notification.vue'
+import AppIcon from '@/components/atoms/AppIcon/Default.vue'
 export default {
   name: 'App',
-  components: {Notification},
+  components: {Notification, AppIcon},
   data () {
     return {
       size: 1,

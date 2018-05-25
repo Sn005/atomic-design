@@ -2,17 +2,14 @@
 import Presenter from './Presenter.vue'
 export default {
   name: 'TrashCanIcon',
-  mixins: [Presenter],
+  extends: Presenter,
   data () {
     return {
       name: 'trash-can'
     }
   },
   props: {
-    clickable: {
-      type: Boolean,
-      default: false
-    }
+    ...Presenter.props
   }
 }
 </script>

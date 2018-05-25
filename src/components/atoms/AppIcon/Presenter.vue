@@ -9,6 +9,12 @@
 <script>
 export default {
   name: 'Icon',
+  props: {
+    clickable: {
+      type: Boolean,
+      default: false
+    }
+  },
   data () {
     return {
       width: 20,
