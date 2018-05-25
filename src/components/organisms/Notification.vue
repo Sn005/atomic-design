@@ -1,25 +1,29 @@
 <template lang='pug'>
-section.notification
-  div.notification__media
-    app-img(
-      :src="thumbnail"
-      :alt="alt"
-      :width="128"
-      :height="72"
-    )
-  div.notification__body
+media-object-layout.root(
+  tag="section"
+)
+  app-img.media(
+    :src="thumbnail"
+    :alt="alt"
+    :width="128"
+    :height="72"
+    slot="media"
+  )
+  div(
+    slot="body"
+  )
     app-heading(
       :level="3"
       :visualLevel="6"
     ) {{ title }}
-    app-info.notification__time(size="s")
+    app-info.time(size="s")
       app-time(:time="startAt")
       | ～
       app-time(
         :time="endAt"
         format="HH:mm"
       )
-    div.notification__del(
+    div.del(
         @click="$emit('delete-action')"
       )
       delete-button
@@ -30,6 +34,7 @@ import AppHeading from '@/components/atoms/AppHeading/Default.vue'
 import AppInfo from '@/components/atoms/AppTxt/Info.vue'
 import AppTime from '@/components/atoms/AppTime.vue'
 import DeleteButton from '@/components/molecules/DeleteButton.vue'
+import MediaObjectLayout from '@/components/atoms/MediaObjectLayout.vue'
 export default {
   name: 'Notification',
   components: {
@@ -37,7 +42,8 @@ export default {
     AppHeading,
     AppInfo,
     AppTime,
-    DeleteButton
+    DeleteButton,
+    MediaObjectLayout
   },
   props: {
     program: {
@@ -65,31 +71,26 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-.notification{
+.root{
   $elm: #{&};
-  display: flex;
   position: relative;
   padding: 1rem;
-  &__body{
-    flex: 1;
-    min-width: 0;
-  }
-  &__media{
-    padding-right: 1rem;
-  }
-  &__time{
-    margin-top: .5rem;
-  }
-  &__del{
-    position: absolute;
-    top: 50%;
-    right: 1.5rem;
-    transform: translateX(-50%);
-  }
-  &:hover{
-    #{$elm}__del{
-      display: inline-block;
-    }
+}
+
+.media{
+  padding-right: 1rem;
+}
+.time{
+  margin-top: .5rem;
+}
+
+.del{
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateX(-50%);
+  .root:hover & {
+    display: inline-block;
   }
 }
 </style>
