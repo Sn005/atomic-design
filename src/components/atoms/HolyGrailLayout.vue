@@ -1,6 +1,7 @@
 <template lang='pug'>
   div.root
-    slot(name="top")
+    div
+      slot(name="top")
     div.body
       div.main
         slot(name="main")
