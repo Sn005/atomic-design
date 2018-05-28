@@ -5,7 +5,8 @@ export default {
   extends: Presenter
 }
 </script>
-<style scoped lang="scss" src="./style.scss">
+<style scoped lang="scss">
+@import "./style.scss";
 .status {
   background-color: $color-warning;
   color: #fff;
