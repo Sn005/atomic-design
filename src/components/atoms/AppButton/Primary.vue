@@ -6,6 +6,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@import "./style.scss";
 .status {
   background-color: #51c300;
   color: #fff;
