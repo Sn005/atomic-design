@@ -23,8 +23,3 @@ export default {
   }
 }
 </script>
-<style scoped lang='scss'>
-.s { font-size: .8rem; }
-.m { font-size:  1rem; }
-.l { font-size: 1.2rem; }
-</style>

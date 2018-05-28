@@ -9,5 +9,6 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
+@import "./style.scss";
 .state { color: #8C8C8C; }
 </style>
