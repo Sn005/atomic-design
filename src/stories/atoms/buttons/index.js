@@ -5,7 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import AppButton from '@/components/atoms/AppButton/Default.vue'
 import AppButtonPrimary from '@/components/atoms/AppButton/Primary.vue'
 
-storiesOf(`atoms/buttons`, module)
+storiesOf(`atoms/Buttons`, module)
   .addDecorator(VueInfoAddon)
   .addDecorator(withKnobs)
   .add('デフォルト', () => {
