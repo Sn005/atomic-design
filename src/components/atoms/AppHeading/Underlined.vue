@@ -15,7 +15,8 @@ export default {
   }
 }
 </script>
-<style scoped lang='scss'>
+<style lang="scss" scoped>
+@import "./style.scss";
 .underlined{
   padding-bottom: 8px;
   border-bottom: 2px solid #ccc;
