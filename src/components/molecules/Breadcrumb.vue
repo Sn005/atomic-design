@@ -34,11 +34,11 @@ export default {
 }
 
 .item {
-  font-size: var(--font-size-s);
+  font-size: $font-size-s;
 }
 
 .item + .item {
-  margin-left: calc(var(--space) * 3);
+  margin-left: $space * 3;
   position: relative;
 }
 
