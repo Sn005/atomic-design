@@ -6,6 +6,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@import "../../../assets/styles/_properties.scss";
 @import "./style.scss";
 .status {
   background-color: $color-warning;
