@@ -13,32 +13,32 @@
   /* ***** ブランディング層 ***** */
 
   /* 色：色の意味などをサービス全体で統一 */
-  $color-base: var($color-white);
-  $color-link: var($color-green);
+  $color-base: $color-white;
+  $color-link: $color-green;
   $color-link-visited: none;
   $color-link-hover: none;
   $color-link-active: none;
   $color-success: none;
   $color-danger: none;
-  $color-warning: var($color-red);
-  $color-info: var($color-gray);
-  $color-primary: var($color-green);
+  $color-warning: $color-red;
+  $color-info: $color-gray;
+  $color-primary: $color-green;
   $color-secondary: none;
   $color-accent: none;
-  $color-selected: var($color-gray-p);
+  $color-selected: $color-gray-p;
 
   /* ***** メディア（媒体）層 ***** */
 
   /* 色：媒体固有で使用する色 */
-  $color-text: var($color-black);
-  $color-text-outlined: var($color-white);
-  $color-tip: var($color-gray-dk);
-  $color-line: var($color-gray-lt);
-  $color-info-layer1: var($color-gray-p);
-  $color-info-layer2: var($color-white);
-  $color-header: var($color-black);
-  $color-card: var($color-white);
-  $color-card-header: var($color-black);
+  $color-text: $color-black;
+  $color-text-outlined: $color-white;
+  $color-tip: $color-gray-d;
+  $color-line: $color-gray-lt;
+  $color-info-layer1: $color-gray-p;
+  $color-info-layer2: $color-white;
+  $color-header: $color-black;
+  $color-card: $color-white;
+  $color-card-header: $color-black;
 
   /* 文字：サイズ（媒体に最適化した文字サイズ） */
   $font-size-xxs: none;
@@ -62,7 +62,7 @@
   $line-width: 1px;
   $line-style: solid;
   $radius: 2px;
-  $border: var($line-width) var($line-style) var($color-line);
+  $border: $line-width $line-style $color-line;
 
   /* フィードバックの定義（媒体に最適化したフィードバック・デザイン要素） */
   $hover-feedback-opacity: .7;
@@ -70,10 +70,10 @@
   /* アニメーションの定義（媒体に最適化したアニメーション・デザイン要素） */
   $hover-animation-duration: .1s;
   $hover-animation-timing: ease-out;
-  $hover-animation: var($hover-animation-duration) var($hover-animation-timing);
+  $hover-animation: $hover-animation-duration $hover-animation-timing;
   $fade-animation-duration: .2s;
   $fade-animation-timing: linear;
-  $fade-animation: var($fade-animation-duration) var($fade-animation-timing);
+  $fade-animation: $fade-animation-duration $fade-animation-timing;
 
   /* Z 座標の管理（Web 媒体／CSS では Z 座標を管理する） */
   $z-header: 10;
