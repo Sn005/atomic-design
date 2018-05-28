@@ -2,7 +2,10 @@
 import Presenter from './Presenter.vue'
 export default {
   name: 'AppButton',
-  extends: Presenter
+  extends: Presenter,
+  props: {
+    ...Presenter.props
+  }
 }
 </script>
 <style scoped lang="scss">

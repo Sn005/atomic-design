@@ -6,6 +6,8 @@
     <br>
     <app-icon name="trash-can"></app-icon>
     <br>
+    <app-button>TEST</app-button>
+    <br>
     <router-view/>
   </div>
 </template>
@@ -13,9 +15,10 @@
 <script>
 import Notification from '@/components/organisms/Notification.vue'
 import AppIcon from '@/components/atoms/AppIcon/Default.vue'
+import AppButton from '@/components/atoms/AppButton/Default.vue'
 export default {
   name: 'App',
-  components: {Notification, AppIcon},
+  components: {Notification, AppIcon, AppButton},
   data () {
     return {
       size: 1,
