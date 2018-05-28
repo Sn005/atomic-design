@@ -4,7 +4,7 @@
   )
     div.sticky
       slot(name="sticky") 固定部分componentが入ります
-    div.sticky
+    div.body
       slot(name="body") body部分componentが入ります
 </template>
 <script>
