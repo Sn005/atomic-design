@@ -9,6 +9,7 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
+@import "../../../assets/styles/_properties.scss";
 @import "./style.scss";
-.state { color: #f0163a; }
+.state { color: $color-warning; }
 </style>
