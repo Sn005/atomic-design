@@ -1,7 +1,7 @@
 <template lang='pug'>
   div.root
     navigation(
-      :items="navigation"
+      :items="navigations"
     )
 </template>
 <script>
@@ -12,7 +12,7 @@ export default {
     Navigation
   },
   props: {
-    navigation: {
+    navigations: {
       type: Array,
       required: true
     }
