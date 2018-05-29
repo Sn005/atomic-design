@@ -16,7 +16,7 @@
       )
 </template>
 <script>
-import StickyHeaderLayout from '@/components/adoms/StickyHeaderLayout.vue'
+import StickyHeaderLayout from '@/components/atoms/StickyHeaderLayout.vue'
 import PageHeader from '@/components/organisms/PageHeader.vue'
 import AppHeader from '@/components/organisms/AppHeader.vue'
 import NotificationList from '@/components/organisms/NotificationList.vue'
@@ -27,6 +27,20 @@ export default {
     PageHeader,
     AppHeader,
     NotificationList
+  },
+  props: {
+    notifications: {
+      type: Array,
+      required: true
+    },
+    navigations: {
+      type: Array,
+      required: true
+    },
+    breadcrumb: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

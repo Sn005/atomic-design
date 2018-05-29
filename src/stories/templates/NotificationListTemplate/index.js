@@ -4,6 +4,12 @@ import VueInfoAddon from 'storybook-addon-vue-info'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
+import {
+  notifications,
+  navigations,
+  breadcrumb
+} from '@/mock/data.js'
+
 import NotificationListTemplate from '@/components/templates/NotificationListTemplate.vue'
 
 storiesOf(`templates/NotificationListTemplate`, module)
@@ -14,17 +20,19 @@ storiesOf(`templates/NotificationListTemplate`, module)
       components: { NotificationListTemplate },
       data () {
         return {
-          navigations: [
-            { label: 'ホーム', url: '#' },
-            { label: '番組表', url: '#' },
-            { label: '通知番組', url: '#', current: true },
-            { label: 'お知らせ', url: '#' },
-            { label: '設定', url: '#' }
-          ]
+          notifications: notifications,
+          navigations: navigations,
+          breadcrumb: breadcrumb
         }
       },
       template: `
-          <app-header :navigations="navigations" />
-      `
+          <notification-list-template
+            :notifications="notifications"
+            :navigations="navigations"
+            :breadcrumb="breadcrumb"
+            @on-click-delete="onClickDelete"
+          />
+      `,
+      methods: { onClickDelete: action('削除ボタンがクリックされました') }
     }
   })
