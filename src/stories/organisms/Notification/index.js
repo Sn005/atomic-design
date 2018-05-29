@@ -25,7 +25,7 @@ storiesOf(`organisms/Notification`, module)
         }
       },
       template: `
-        <notification :program="program" @delete-action="action"/>
+        <notification :program="program" @on-click-delete="action"/>
       `,
       methods: {
         action: action('削除ボタンがクリックされました')

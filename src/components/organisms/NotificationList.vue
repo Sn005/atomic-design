@@ -4,7 +4,7 @@
       v-for="program in programs"
       :key="program.id"
       :program="program"
-      @on-click-delete="$emit('on-click-delete')"
+      @on-click-delete="onClickDelete"
     )
 </template>
 <script>
@@ -16,6 +16,11 @@ export default {
     programs: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    onClickDelete (program) {
+      this.$emit('on-click-delete', program)
     }
   }
 }

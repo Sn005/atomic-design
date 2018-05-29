@@ -12,7 +12,7 @@
       )
       notification-list.notifications(
         :programs="notifications"
-        @on-click-delete="$emit('on-click-delete')"
+        @on-click-delete="onClickDelete"
       )
 </template>
 <script>
@@ -40,6 +40,11 @@ export default {
     breadcrumb: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    onClickDelete (program) {
+      this.$emit('on-click-delete', program)
     }
   }
 }

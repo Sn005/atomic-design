@@ -58,7 +58,7 @@ storiesOf(`organisms/NotificationList`, module)
         }
       },
       template: `
-        <notification-list :programs="programs" @delete-action="action"/>
+        <notification-list :programs="programs" @on-click-delete="action"/>
       `,
       methods: {
         action: action('削除ボタンがクリックされました')
