@@ -6,7 +6,7 @@ export default {
     commit('setNavigations', navigations)
     commit('setBreadcrumb', breadcrumb)
   },
-  async deleteNotification ({commit}, id) {
+  deleteNotification ({commit}, id) {
     const notifications = [ ...commit.state.notifications ].filter(noti => {
       return noti.id !== id
     })
