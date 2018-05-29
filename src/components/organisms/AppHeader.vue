@@ -1,9 +1,22 @@
 <template lang='pug'>
   div.root
+    navigation(
+      :items="navigation"
+    )
 </template>
 <script>
+import Navigation from '@/components/molecules/Navigation.vue'
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  components: {
+    Navigation
+  },
+  props: {
+    navigation: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 <style scoped lang='scss'>
