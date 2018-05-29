@@ -1,10 +1,10 @@
 <template lang='pug'>
   nav
-    ul.list(
-      v-for="(item, index) in items"
-      :key="index"
-    )
-      li.item
+    ul.list
+      li.item(
+        v-for="(item, index) in items"
+        :key="index"
+      )
         a.link(
           v-if="!item.curren"
           :href="item.href"
