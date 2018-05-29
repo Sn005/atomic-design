@@ -23,8 +23,8 @@ export default {
   },
   methods: {
     ...mapActions(['fetch', 'deleteNotification']),
-    onDeleteNotification () {
-      console.log('test')
+    onDeleteNotification (program) {
+      this.deleteNotification(program.id)
     }
   },
   async mounted () {
