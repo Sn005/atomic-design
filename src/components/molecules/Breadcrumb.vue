@@ -4,10 +4,14 @@
       v-for="(item , index) in items"
       :key="index"
     )
-      app-anchor(href="item.url")
+      app-anchor(
+        v-if="(items.length - 1) !== index"
+        :href="item.url"
+      )
         app-txt(size="s" tag="span") {{ item.label }}
-      | :
-      span {{ item.label }}
+      span(
+        v-else
+      ) {{ item.label }}
 </template>
 <script>
 import AppAnchor from '@/components/atoms/AppAnchor.vue'
