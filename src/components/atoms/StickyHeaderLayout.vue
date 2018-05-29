@@ -22,9 +22,11 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
+@import "../../assets/styles/_properties.scss";
 .sticky {
   position: fixed;
   width: 100%;
+  z-index: $z-header;
 }
 
 .body {

@@ -4,7 +4,7 @@
       :navigations="navigations"
       slot="sticky"
     )
-    main(
+    main.main(
       slot="body"
     )
       page-header(
@@ -48,13 +48,13 @@ export default {
 @import "../../assets/styles/_properties.scss";
 .main {
   box-sizing: border-box;
-  padding: calc($space* 8) calc($space * 2) $space;
+  padding: ($space* 8) ($space * 2) $space;
 }
 
 .notifications {
-  border: var($border);
+  border: $border;
   border-width: 1px 0;
-  margin-top: calc($space * 2);
+  margin-top: ($space * 2);
 }
 
 </style>]

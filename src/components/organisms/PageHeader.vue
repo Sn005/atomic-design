@@ -1,5 +1,5 @@
 <template lang='pug'>
-  div.root
+  div.page-header
     breadcrumb(
       :items="navigations"
     )
@@ -22,8 +22,8 @@ export default {
 <style scoped lang='scss'>
 @import "../../assets/styles/_properties.scss";
 
-.root {
-  padding: calc($space * 2);
+.page-header {
+  padding: ($space * 2);
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template lang='pug'>
-  ul.root
+  ul.breadcrumb
     li.item(
       v-for="(item , index) in items"
       :key="index"
@@ -33,7 +33,7 @@ export default {
 <style scoped lang='scss'>
 @import "../../assets/styles/_properties.scss";
 
-.root {
+.breadcrumb {
   display: flex;
 }
 

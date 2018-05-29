@@ -23,7 +23,7 @@ export default {
 @import "../../assets/styles/_properties.scss";
 
 .root {
-  padding: calc($space * 2);
+  padding: $space * 2;
   background-color: $color-header;
   color: $color-text-outlined;
 }

@@ -38,7 +38,7 @@ export default {
 
 .link {
   color: #fff;
-  padding: calc($space * 0.5) 0;
+  padding: ($space * 0.5) 0;
   @at-root .current{
     border-color: $color-primary;
     border-style: solid;
