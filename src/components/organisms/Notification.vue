@@ -24,7 +24,7 @@ media-object-layout.root(
         format="HH:mm"
       )
     div.del(
-        @click="$emit('delete-action')"
+        @click="$emit('on-click-delete')"
       )
       delete-button
 </template>
