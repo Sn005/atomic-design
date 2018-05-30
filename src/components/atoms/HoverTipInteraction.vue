@@ -1,5 +1,5 @@
 <template lang='pug'>
-span.root
+span.hover-tip-interaction
   slot(
     v-if="hasRoot"
     name="root"
@@ -26,16 +26,34 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-.root{
+@import "../../assets/styles/_properties.scss";
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes marker {
+  to {
+    background-color: $color-selected;
+  }
+}
+
+.hover-tip-interaction{
   display: inline-block;
   position: relative;
   &:hover{
     > {
       .tip{
         display: inline-block;
+        animation: fade $fade-animation;
       }
       .marker{
-        background-color: #f6f6f6;
+        background-color: $color-selected;
+        animation: marker $fade-animation forwards;
       }
     }
   }
