@@ -38,4 +38,14 @@ describe('AppHeading.vue', () => {
     expect(wrapper.vm.tag).toBe('h6')
     expect(wrapper.vm.formattedViewLevel).toBe(6)
   })
+  it('snapshotチェック', () => {
+    const props = {
+      propsData: {
+        level: 1,
+        visualLevel: 1
+      }
+    }
+    const wrapper = shallowMount(AppHeading, props)
+    expect(wrapper.html()).toMatchSnapshot()
+  })
 })
