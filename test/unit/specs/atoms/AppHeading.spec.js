@@ -16,4 +16,26 @@ describe('AppHeading.vue', () => {
     const wrapper = shallowMount(AppHeading, props)
     expect(wrapper.props().visualLevel).toBe(2)
   })
+  it('1未満のレベルは1とする', () => {
+    const props = {
+      propsData: {
+        level: 0,
+        visualLevel: 0
+      }
+    }
+    const wrapper = shallowMount(AppHeading, props)
+    expect(wrapper.vm.tag).toBe('h1')
+    expect(wrapper.vm.formattedViewLevel).toBe(1)
+  })
+  it('7以上の見出しレベルは6とする', () => {
+    const props = {
+      propsData: {
+        level: 7,
+        visualLevel: 7
+      }
+    }
+    const wrapper = shallowMount(AppHeading, props)
+    expect(wrapper.vm.tag).toBe('h6')
+    expect(wrapper.vm.formattedViewLevel).toBe(6)
+  })
 })

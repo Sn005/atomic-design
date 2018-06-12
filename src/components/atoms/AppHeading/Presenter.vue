@@ -12,11 +12,11 @@ export default {
   },
   computed: {
     formattedLevel () {
-      return Math.max(0, Math.min(6, this.level))
+      return Math.max(1, Math.min(6, this.level))
     },
     formattedViewLevel () {
       const level = (typeof this.visualLevel !== 'undefined') ? this.visualLevel : this.formattedLevel
-      return Math.max(0, Math.min(6, level))
+      return Math.max(1, Math.min(6, level))
     },
     tag () {
       return `h${this.formattedLevel}`
