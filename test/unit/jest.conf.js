@@ -1,9 +1,9 @@
 const path = require('path')
 
 module.exports = {
-  // globals: {
-  //   __TRANSFORM_HTML__: true
-  // },
+  globals: {
+    __TRANSFORM_HTML__: true
+  },
   rootDir: path.resolve(__dirname, '../../'),
   // moduleFileExtensions: ['vue', 'js', 'jsx', 'json', 'node'],
   moduleFileExtensions: [
@@ -19,6 +19,9 @@ module.exports = {
     '.*\\.(vue)$': '<rootDir>/node_modules/jest-vue-preprocessor'
     // '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
   },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(@storybook/.*\\.vue$))'
+  ],
   testPathIgnorePatterns: [
     '/node_modules/(?!(@storybook/.*\\.vue$))'
     // '<rootDir>/test/e2e'
